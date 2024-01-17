@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./img/nagonggan-og.png" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:description" content="인테리어 플랫폼 서비스" />
+    <meta property="og:title" content="인테리어 플랫폼 서비스" />
+    <meta name="Description" content="인테리어 플랫폼 서비스" />
+    <meta name="naver-site-verification" content="" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon.png" />
+    <title>나만의공간 파트너공간</title>
+
+    <!-- jQuery -->
+    <script src="./js/library/jquery/jquery-3.6.0.min.js"></script>
+
+    <!-- Linear Icons -->
+    <link rel="stylesheet" href="./css/Linearicons-Free/WebFont/style.css" />
+
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="./css/fontAwesome/css/all.min.css" />
+
+    <!-- owl  -->
+    <link rel="stylesheet" href="./js/library/owl/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./js/library/owl/owl.theme.default.min.css" />
+    <script src="./js/library/owl/owl.carousel.js"></script>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="./js/library/swiper/swiper-bundle.min.css" />
+    <script src="./js/library/swiper/swiper-bundle.min.js"></script>
+
+    <!-- style -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- js -->
+    <script src="./js/partner.js"></script>
+  </head>
+
+  <body>
+    <!-- container -->
+    <div id="container" class="contract">
+      <!-- header -->
+      <header>
+        <div class="inner">
+          <h1 class="logo">
+            <a href="./home.html">
+              <img src="./img/logo_wh.png" alt="나만의공간" />
+            </a>
+          </h1>
+          <ul>
+            <li class="profile">
+              <a href="./company.html">
+                <figure>
+                  <img
+                    src="./img/ico_profile.png"
+                    alt="마이페이지"
+                    onerror="this.src='./img/ico_profile.png'"
+                  />
+                </figure>
+                <span>시공사</span>
+              </a>
+            </li>
+            <li class="logout">
+              <a href="./">
+                <figure>
+                  <img src="./img/ico_logout.png" alt="로그아웃" />
+                </figure>
+                <span>로그아웃</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <!-- // header -->
+
+      <!-- nav -->
+      <nav>
+        <div class="inner">
+          <ul>
+            <li><a href="./home.html">홈</a></li>
+            <li><a href="./inquiry.html">문의</a></li>
+            <li class="active">
+              <a href="./contract.html">계약</a>
+            </li>
+            <li>
+              <a href="./portfolio.html">포폴</a>
+            </li>
+            <li>
+              <a href="./progress.html">실시간</a>
+            </li>
+            <li>
+              <a href="./pay.html">결제</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- // nav -->
+
+      <!-- contract_list -->
+      <section class="contract_list">
+        <div class="inner">
+          <div class="sec_title">
+            <h5>전체 <span>3건</span></h5>
+          </div>
+          <table class="tbl_main">
+            <thead>
+              <tr>
+                <th class="trl">No.</th>
+                <th>계약일</th>
+                <th>계약여부</th>
+                <th>서류</th>
+                <th class="trr">상세</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>2023.12.10</td>
+                <td><strong>계약</strong></td>
+                <td>
+                  <button
+                    type="button"
+                    onclick="contract_popup()"
+                    class="open_attach btn_view"
+                  >
+                    첨부
+                  </button>
+                </td>
+                <td>
+                  <a href="./contract_detail.html" class="btn_view">보기</a>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>2023.12.10</td>
+                <td>미계약</td>
+                <td>
+                  <button
+                    type="button"
+                    onclick="contract_popup()"
+                    class="open_attach btn_view"
+                  >
+                    첨부
+                  </button>
+                </td>
+                <td>
+                  <a href="./contract_detail.html" class="btn_view">보기</a>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>2023.12.10</td>
+                <td>미계약</td>
+                <td>
+                  <button
+                    type="button"
+                    onclick="contract_popup()"
+                    class="open_attach btn_view"
+                  >
+                    첨부
+                  </button>
+                </td>
+                <td>
+                  <a href="./contract_detail.html" class="btn_view">보기</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <!-- // contract_list -->
+
+      <!-- pg_wrap -->
+      <div class="pg_wrap">
+        <div class="pg">
+          <span class="pg_start">pg_start</span>
+          <span class="pg_prev">pg_prev</span>
+          <span class="pg_page pg_current">1</span>
+          <span class="pg_page">2</span>
+          <span class="pg_page">3</span>
+          <span class="pg_page">4</span>
+          <span class="pg_page">5</span>
+          <span class="pg_next">pg_next</span>
+          <span class="pg_end">pg_end</span>
+        </div>
+      </div>
+      <!-- // pg_wrap -->
+
+      <!-- footer -->
+      <footer>
+        <p>COPYRIGHT &copy; NAGONGGAN. ALL RIGHTS RESERVED.</p>
+      </footer>
+      <!-- // footer -->
+    </div>
+    <!-- // container -->
+
+    <!-- popup -->
+    <form id="form_contract">
+      <div class="pop_wrap pop_file">
+        <div class="pop_container">
+          <div class="pop_header">
+            <h3>첨부파일 업로드</h3>
+            <a href="javascript:void(0);" class="pop_close"
+              ><span class="lnr lnr-cross"></span
+            ></a>
+          </div>
+          <div class="pop_contents">
+            <ul>
+              <li>
+                <h5>계약서</h5>
+                <div class="file_box">
+                  <label
+                    ><input
+                      type="file"
+                      accept="image/*"
+                      name="file1"
+                      onchange="fileUpload('input_file_contract','filename_contract')"
+                      id="inqu_attach_contract1"
+                      class="input_file input_file_contract"
+                      accept="image/*"
+                  /></label>
+                  <span class="filename filename_contract"
+                    >선택된 파일 없음</span
+                  >
+                </div>
+              </li>
+              <li>
+                <h5>공정표</h5>
+                <div class="file_box">
+                  <label
+                    ><input
+                      type="file"
+                      accept="image/*"
+                      name="file2"
+                      id="inqu_attach_contract2"
+                      onchange="fileUpload('input_file_schedule','filename_schedule')"
+                      class="input_file input_file_schedule"
+                      accept="image/*"
+                  /></label>
+                  <span class="filename filename_schedule"
+                    >선택된 파일 없음</span
+                  >
+                </div>
+              </li>
+              <li>
+                <h5>견적서</h5>
+                <div class="file_box">
+                  <label
+                    ><input
+                      type="file"
+                      accept="image/*"
+                      name="file3"
+                      id="inqu_attach_contract3"
+                      onchange="fileUpload('input_file_estimate','filename_estimate')"
+                      class="input_file input_file_estimate"
+                      accept="image/*"
+                  /></label>
+                  <span class="filename filename_estimate"
+                    >선택된 파일 없음</span
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="pop_footer">
+            <button type="button" class="btn" onclick="contract_img_up();">
+              적용
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- // popup -->
+  </body>
+</html>

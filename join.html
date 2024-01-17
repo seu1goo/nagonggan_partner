@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./img/nagonggan-og.png" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:description" content="인테리어 플랫폼 서비스" />
+    <meta property="og:title" content="인테리어 플랫폼 서비스" />
+    <meta name="Description" content="인테리어 플랫폼 서비스" />
+    <meta name="naver-site-verification" content="" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon.png" />
+    <title>나만의공간 파트너공간</title>
+
+    <!-- jQuery -->
+    <script src="./js/library/jquery/jquery-3.6.0.min.js"></script>
+
+    <!-- Linear Icons -->
+    <link rel="stylesheet" href="./css/Linearicons-Free/WebFont/style.css" />
+
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="./css/fontAwesome/css/all.min.css" />
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="./js/library/swiper/swiper-bundle.min.css" />
+    <script src="./js/library/swiper/swiper-bundle.min.js"></script>
+
+    <!-- style -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- js -->
+    <script src="./js/partner.js"></script>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header class="join_header">
+      <div class="h_top">
+        <div class="inner">
+          <h1 class="logo">
+            <a href="./">
+              <span>파트너공간</span>
+            </a>
+          </h1>
+          <a
+            href="https://seu1goo.github.io/nagonggan/"
+            target="_blank"
+            class="go_site"
+            ><img src="./img/ico_monitor.png" alt="사이트 바로가기" /> 사이트
+            바로가기</a
+          >
+        </div>
+      </div>
+    </header>
+    <!-- // header -->
+
+    <!-- contents -->
+    <div id="contents" class="join">
+      <form
+        id="form_partner_join"
+        name="form_partner_join"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <section class="join_wrap">
+          <div class="inner">
+            <div class="sec_title">
+              <h4>시공사 가입하기</h4>
+            </div>
+            <ul class="join_area">
+              <!-- join_login -->
+              <li class="join_login">
+                <h5>로그인 정보</h5>
+                <div class="input_flex join_login_id">
+                  <input
+                    type="text"
+                    name="join_partner_id"
+                    placeholder="아이디 (영문 또는 영문/숫자 조합 5~12자리 )"
+                    minlength="5"
+                    maxlength="12"
+                    id="join_partner_id"
+                  />
+                  <button type="button" onclick="check_partner_id();">
+                    중복확인
+                  </button>
+                </div>
+                <div class="join_login_pw">
+                  <input
+                    type="password"
+                    name="join_partner_pw"
+                    placeholder="비밀번호 (숫자 또는 영문/숫자 조합 5-12자리)"
+                    minlength="5"
+                    maxlength="12"
+                    id="join_partner_pw"
+                  />
+                </div>
+                <div class="join_login_pw_chk">
+                  <input
+                    type="password"
+                    name="join_partner_pw_ok"
+                    placeholder="비밀번호 재입력"
+                    minlength="5"
+                    maxlength="12"
+                    id="join_partner_pw_ok"
+                  />
+                </div>
+              </li>
+              <!-- // join_login -->
+
+              <!-- join_ceo -->
+              <li class="join_ceo">
+                <h5>대표자 정보</h5>
+                <div class="join_ceo_name">
+                  <input
+                    type="text"
+                    name="ceo_name"
+                    placeholder="대표자 성명"
+                    id="ceo_name"
+                    maxlength="20"
+                  />
+                </div>
+                <div class="join_ceo_tel">
+                  <input
+                    type="text"
+                    name="ceo_phone"
+                    placeholder="대표자 연락처 (-제외)"
+                    id="ceo_phone"
+                    maxlength="14"
+                  />
+                </div>
+              </li>
+              <!-- // join_ceo -->
+
+              <!-- join_range -->
+              <li class="join_range">
+                <h5>시공범위 <span>(중복체크 가능)</span></h5>
+                <div class="join_range_total">
+                  <h6>종합인테리어</h6>
+                  <ul>
+                    <li>
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="business_scope"
+                          value="11000"
+                          id="business_scope"
+                        />
+                        <span>주거공간 종합인테리어</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="business_scope"
+                          value="12000"
+                          id="business_scope"
+                        />
+                        <span>상업공간 종합인테리어</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="join_range_one">
+                  <h6>한 분야 인테리어</h6>
+                  <ul>
+                    <li>
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="business_scope"
+                          value="21100"
+                          id="business_scope"
+                        />
+                        <span>도배</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="business_scope"
+                          value="21200"
+                          id="business_scope"
+                        />
+                        <span>장판</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="business_scope"
+                          value="21300"
+                          id="business_scope"
+                        />
+                        <span>마루</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="business_scope"
+                          value="21400"
+                          id="business_scope"
+                        />
+                        <span>주방</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="business_scope"
+                          value="21500"
+                          id="business_scope"
+                        />
+                        <span>욕실</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="business_scope"
+                          value="21600"
+                          id="business_scope"
+                        />
+                        <span>방문</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="business_scope"
+                          value="21700"
+                          id="business_scope"
+                        />
+                        <span>중문</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="business_scope"
+                          value="21800"
+                          id="business_scope"
+                        />
+                        <span>샷시</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="business_scope"
+                          value="21900"
+                          id="business_scope"
+                        />
+                        <span>필름</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="business_scope"
+                          value="22000"
+                          id="business_scope"
+                        />
+                        <span>몰딩</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="business_scope"
+                          value="22100"
+                          id="business_scope"
+                        />
+                        <span>기타</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- // join_range -->
+
+              <!-- join_company -->
+              <li class="join_company">
+                <h5>회사 정보</h5>
+                <ul class="join_company_l_list">
+                  <li class="join_company_name">
+                    <input
+                      type="text"
+                      name="company_name"
+                      placeholder="회사 상호명"
+                      id="company_name"
+                    />
+                  </li>
+                  <li class="join_company_phone">
+                    <input
+                      type="text"
+                      name="company_phone"
+                      placeholder="회사 연락처"
+                      id="company_phone"
+                    />
+                  </li>
+                  <li class="join_company_addr1">
+                    <input
+                      type="text"
+                      name="company_addr1"
+                      placeholder="회사 주소"
+                      id="company_addr1"
+                      value=""
+                      onClick="openDaumZipAddress();"
+                    />
+                  </li>
+                  <li class="join_company_addr2">
+                    <input
+                      type="text"
+                      name="company_addr2"
+                      value=""
+                      placeholder="회사 나머지 주소"
+                      id="company_addr2"
+                    />
+                  </li>
+                  <li class="join_company_email">
+                    <input
+                      type="text"
+                      name="company_email"
+                      placeholder="회사 이메일"
+                      id="company_email"
+                    />
+                    <span>@</span>
+                    <select
+                      id="company_email2"
+                      name="emaildomain"
+                      class="email_select"
+                    >
+                      <option value="">선택해주세요</option>
+                      <option value="naver.com">naver.com</option>
+                      <option value="gmail.com">gmail.com</option>
+                      <option value="daum.net">daum.net</option>
+                      <option value="hanmail.net">hanmail.net</option>
+                      <option value="nate.com">nate.com</option>
+                      <option value="직접입력">직접입력</option>
+                    </select>
+                    <div class="email_write">
+                      <input
+                        type="text"
+                        name="emaildomain_txt"
+                        id="emaildomain_txt"
+                        placeholder="입력해주세요."
+                      />
+                      <button type="button">
+                        <span class="lnr lnr-cross"></span>
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="join_company_r_list">
+                  <li class="join_company_license">
+                    <input
+                      type="text"
+                      name="company_license"
+                      placeholder="사업등록번호"
+                      id="company_license"
+                    />
+                  </li>
+                  <li class="join_company_web">
+                    <input
+                      type="text"
+                      name="company_web"
+                      value=""
+                      placeholder="회사 홈페이지"
+                      id="company_web"
+                    />
+                  </li>
+                  <li class="join_business_area">
+                    <select name="business_area" id="business_area">
+                      <option value="">시공지역</option>
+                      <option value="서울/경기/인천">서울/경기/인천</option>
+                      <option value="대전/세종/충청">대전/세종/충청</option>
+                      <option value="부산/대구/경상">부산/대구/경상</option>
+                      <option value="광주/목포/전라">광주/목포/전라</option>
+                      <option value="강원/제주">강원/제주</option>
+                    </select>
+                  </li>
+                  <li class="join_business_career">
+                    <select name="business_career" id="business_career">
+                      <option value="">경력</option>
+                      <option value="1년~10년">1년~10년</option>
+                      <option value="11년~20년">11년~20년</option>
+                      <option value="21년~30년">21년~30년</option>
+                      <option value="31년 이상">31년 이상</option>
+                    </select>
+                  </li>
+                  <li class="join_main_field">
+                    <input
+                      type="text"
+                      name="main_field"
+                      placeholder="전문분야"
+                      id="main_field"
+                    />
+                  </li>
+                </ul>
+                <textarea
+                  name="company_intro"
+                  placeholder="회사소개"
+                  id="company_intro"
+                ></textarea>
+              </li>
+              <!-- // join_company -->
+
+              <!-- join_license -->
+              <li class="join_license">
+                <h5>사업자 사본</h5>
+                <input
+                  type="file"
+                  name="company_license_img"
+                  title="파일첨부 1 : 용량 20MB 이하만 업로드 가능"
+                  id="company_license_img"
+                />
+              </li>
+              <!-- // join_license -->
+
+              <!-- join_logo -->
+              <li class="join_logo">
+                <h5>회사(상호, 로고)</h5>
+                <input
+                  type="file"
+                  name="company_logo"
+                  title="파일첨부 1 : 용량 20MB 이하만 업로드 가능"
+                  id="company_logo"
+                />
+              </li>
+              <!-- // join_logo -->
+            </ul>
+            <div class="btn_area">
+              <button
+                type="button"
+                accesskey="s"
+                onclick="check_partner_join();"
+                id="company_submit"
+                class="btn_join"
+              >
+                가입하기
+              </button>
+            </div>
+          </div>
+        </section>
+      </form>
+    </div>
+    <!-- // contents -->
+  </body>
+</html>

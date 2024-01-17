@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./img/nagonggan-og.png" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:description" content="인테리어 플랫폼 서비스" />
+    <meta property="og:title" content="인테리어 플랫폼 서비스" />
+    <meta name="Description" content="인테리어 플랫폼 서비스" />
+    <meta name="naver-site-verification" content="" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon.png" />
+    <title>나만의공간 파트너공간</title>
+
+    <!-- jQuery -->
+    <script src="./js/library/jquery/jquery-3.6.0.min.js"></script>
+
+    <!-- Linear Icons -->
+    <link rel="stylesheet" href="./css/Linearicons-Free/WebFont/style.css" />
+
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="./css/fontAwesome/css/all.min.css" />
+
+    <!-- owl  -->
+    <link rel="stylesheet" href="./js/library/owl/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./js/library/owl/owl.theme.default.min.css" />
+    <script src="./js/library/owl/owl.carousel.js"></script>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="./js/library/swiper/swiper-bundle.min.css" />
+    <script src="./js/library/swiper/swiper-bundle.min.js"></script>
+
+    <!-- style -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- js -->
+    <script src="./js/partner.js"></script>
+  </head>
+
+  <body>
+    <!-- container -->
+    <div id="container" class="login">
+      <div class="inner">
+        <!-- logo_area -->
+        <section class="logo_area">
+          <a href="./">
+            <img src="./img/logo_pp.png" alt="나만의공간" />
+          </a>
+          <h4>시공사 서비스 플랫폼</h4>
+        </section>
+        <!-- // logo_area -->
+
+        <!-- login_area -->
+        <section class="login_area">
+          <form
+            name="partner_login"
+            id="partner_login"
+            class="login_form"
+            method="post"
+          >
+            <div class="id_area">
+              <input
+                type="text"
+                name="partner_id"
+                id="partner_id"
+                placeholder="아이디를 입력하세요."
+                class="login_id user_area"
+                required
+              />
+            </div>
+            <div class="pw_area">
+              <input
+                type="password"
+                name="partner_pw"
+                id="partner_pw"
+                placeholder="비밀번호를 입력하세요."
+                class="login_pw user_area"
+                required
+              />
+              <figure>
+                <img src="./img/ico_visible_off.png" alt="비밀번호 표시 여부" />
+              </figure>
+            </div>
+
+            <a href="./home.html" id="btn_submit" class="btn">로그인</a>
+
+            <div class="login_etc">
+              <a href="javascript:void(0);" class="open_popup open_find"
+                >아이디/비밀번호 찾기</a
+              >
+            </div>
+          </form>
+        </section>
+        <!-- // login_area -->
+
+        <!-- join_area -->
+        <section class="join_area">
+          <h4>아직 회원이 아니신가요?</h4>
+          <div class="go_join">
+            <a href="./join.html"><p>시공사 가입</p></a>
+          </div>
+        </section>
+        <!-- // join_area -->
+      </div>
+    </div>
+    <!-- // container -->
+
+    <!-- popup -->
+    <div class="pop_wrap find_user">
+      <div class="pop_container">
+        <div class="pop_header">
+          <a href="javascript:void(0);" class="pop_close"
+            ><span class="lnr lnr-cross"></span
+          ></a>
+        </div>
+
+        <div class="pop_contents">
+          <ul class="choice_user">
+            <li class="btn_user btn_id active">아이디 찾기</li>
+            <li class="btn_user btn_pw">비밀번호 찾기</li>
+          </ul>
+
+          <div class="find_area">
+            <ul class="find_id_area active">
+              <li class="find_contents find_id active">
+                <input
+                  type="text"
+                  name="company_name"
+                  id="company_name"
+                  class="user_area"
+                  placeholder="회사 상호명을 입력하세요."
+                  required
+                />
+                <input
+                  type="email"
+                  name="company_email"
+                  id="company_email"
+                  class="user_area"
+                  placeholder="회사 이메일을 입력하세요."
+                  required
+                />
+                <button
+                  type="button"
+                  onclick="find_partner_id()"
+                  class="btn go_id"
+                >
+                  아이디 찾기
+                </button>
+              </li>
+
+              <li id="find_id_mobile_txt" class="find_contents find_id_chk">
+                <h4>
+                  <span>컴퍼니</span> 님의 아이디는 <br />
+                  <strong>abc1**</strong> 입니다.
+                </h4>
+                <p>개인정보 보호를 위해 아이디의 일부는 *로 표기됩니다.</p>
+                <button type="button" class="btn go_login">
+                  로그인 하러가기
+                </button>
+              </li>
+            </ul>
+
+            <ul class="find_pw_area">
+              <li class="find_contents find_pw active">
+                <div class="input_area">
+                  <input
+                    type="text"
+                    name="login_partner_id"
+                    id="login_partner_id"
+                    class="user_area"
+                    placeholder="아이디를 입력하세요."
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="company_email2"
+                    id="company_email2"
+                    class="user_area"
+                    placeholder="회사 이메일을 입력하세요."
+                    required
+                  />
+                </div>
+                <button
+                  type="button"
+                  accesskey="s"
+                  onclick="find_partner_pw()"
+                  class="btn go_pw_set"
+                >
+                  비밀번호 찾기
+                </button>
+              </li>
+
+              <li class="find_contents find_pw_set">
+                <input type="hidden" id="ch_" value="" />
+                <input type="hidden" id="ch_e" value="" />
+                <div class="input_area">
+                  <input
+                    type="password"
+                    name="login_partner_pw"
+                    id="login_partner_pw"
+                    class="user_area"
+                    placeholder="새 비밀번호 입력 (5~12자리)"
+                    minlength="5"
+                    maxlength="12"
+                    required
+                  />
+                  <input
+                    type="password"
+                    name="login_partner_pw_chk"
+                    id="login_partner_pw_chk"
+                    class="user_area"
+                    placeholder="새 비밀번호 재입력"
+                    required
+                  />
+                </div>
+                <button
+                  type="button"
+                  onclick="pw_change()"
+                  class="btn go_pw_chk"
+                >
+                  비밀번호 변경
+                </button>
+              </li>
+
+              <li class="find_contents find_pw_chk">
+                <figure>
+                  <img src="./img/ico_check_o.png" alt="완료" />
+                </figure>
+                <h4>
+                  <span>새로운 비밀번호</span>로 <br />
+                  <strong>변경이 완료</strong>되었습니다.
+                </h4>
+                <p>변경된 비밀번호로 다시 로그인 하시기 바랍니다.</p>
+                <button type="button" class="btn go_login">
+                  로그인 하러가기
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // popup -->
+  </body>
+</html>

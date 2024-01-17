@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./img/nagonggan-og.png" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:description" content="인테리어 플랫폼 서비스" />
+    <meta property="og:title" content="인테리어 플랫폼 서비스" />
+    <meta name="Description" content="인테리어 플랫폼 서비스" />
+    <meta name="naver-site-verification" content="" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon.png" />
+    <title>나만의공간 파트너공간</title>
+
+    <!-- jQuery -->
+    <script src="./js/library/jquery/jquery-3.6.0.min.js"></script>
+
+    <!-- Linear Icons -->
+    <link rel="stylesheet" href="./css/Linearicons-Free/WebFont/style.css" />
+
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="./css/fontAwesome/css/all.min.css" />
+
+    <!-- owl  -->
+    <link rel="stylesheet" href="./js/library/owl/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./js/library/owl/owl.theme.default.min.css" />
+    <script src="./js/library/owl/owl.carousel.js"></script>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="./js/library/swiper/swiper-bundle.min.css" />
+    <script src="./js/library/swiper/swiper-bundle.min.js"></script>
+
+    <!-- style -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- js -->
+    <script src="./js/partner.js"></script>
+  </head>
+
+  <body>
+    <!-- container -->
+    <div id="container" class="sub_page progress_write">
+      <!-- header -->
+      <header class="sub_header">
+        <div class="inner">
+          <a href="javascript:history.back();" class="go_back">
+            <span class="lnr lnr-chevron-left"></span>
+          </a>
+          <h2>실시간현황 등록</h2>
+        </div>
+      </header>
+      <!-- // header -->
+
+      <form
+        id="progres_form"
+        name="form1"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <input
+          type="hidden"
+          name="company_code"
+          value="시공사"
+          id="company_code"
+        />
+        <input type="hidden" name="idx" value="" id="idx" />
+
+        <div class="inner">
+          <!-- progress_write_table -->
+          <section class="progress_write_table">
+            <table class="tbl_sub">
+              <tr>
+                <th>업체명</th>
+                <td>시공사</td>
+                <input
+                  type="hidden"
+                  name="company"
+                  value="시공사"
+                  id="company"
+                />
+              </tr>
+              <tr>
+                <th class="th_top">공사구분</th>
+                <td>
+                  <select name="space_type" required id="space_type">
+                    <option value="">분류를 선택하세요</option>
+                    <option value="주거공간">주거공간</option>
+                    <option value="상업공간">상업공간</option>
+                  </select>
+                  <select
+                    name="space_category"
+                    required
+                    id="space_category"
+                    class="adm_bo_w_input_photo"
+                  >
+                    <option value="">분류를 선택하세요</option>
+                    <option value="아파트">아파트</option>
+                    <option value="빌라">빌라</option>
+                    <option value="주택">주택</option>
+                    <option value="오피스텔/원룸">오피스텔/원룸</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>공사면적</th>
+                <td>
+                  <div class="flex_box">
+                    <input
+                      type="number"
+                      name="construct_area"
+                      value=""
+                      maxlength="5"
+                      oninput="maxLengthCheck(this)"
+                      required
+                      numberOnly
+                      id="construct_area"
+                    />
+                    <p>평</p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>공사기간</th>
+                <td>
+                  <div class="flex_box">
+                    <input
+                      type="number"
+                      name="construct_period"
+                      value=""
+                      required
+                      numberOnly
+                      id="construct_period"
+                    />
+                    <p>일</p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>공사금액</th>
+                <td>
+                  <div class="flex_box">
+                    <input
+                      type="number"
+                      name="construct_amount"
+                      value=""
+                      maxlength="11"
+                      oninput="maxLengthCheck(this)"
+                      required
+                      numberOnly
+                      id="construct_amount"
+                    />
+                    <p>만원</p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>주소</th>
+                <td>
+                  <input
+                    type="text"
+                    name="construct_address"
+                    value=""
+                    autocomplete="off"
+                    required
+                    id="construct_address"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th rowspan="11" class="th_top">
+                  내용<span>(여러장 첨부가능)</span>
+                </th>
+                <td class="guide">
+                  <ul class="guide_info">
+                    <li><span>가로 최소 500px 이상</span>의 이미지</li>
+                    <li>
+                      <span>장당 5MB 이하</span>의 이미지만 가능하며,
+                      <span>jpg 파일</span>을 권장합니다.
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>시공전</h4>
+                  <div class="file_box">
+                    <label
+                      ><input
+                        type="file"
+                        accept="image/*"
+                        name="input_imgs1[]"
+                        multiple
+                        id="input_imgs0"
+                        accept="image/*"
+                        class="input_file"
+                    /></label>
+                  </div>
+                  <div class="img_scroll">
+                    <div class="imgs_wrap input_imgs_wrap"></div>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <h4>시공중</h4>
+                  <div class="file_box">
+                    <label
+                      ><input
+                        type="file"
+                        accept="image/*"
+                        name="input_imgs2[]"
+                        multiple
+                        id="input_imgs1"
+                        accept="image/*"
+                        class="input_file"
+                    /></label>
+                  </div>
+                  <div class="img_scroll">
+                    <div class="imgs_wrap input_imgs_wrap1"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>시공완료</h4>
+                  <div class="file_box">
+                    <label
+                      ><input
+                        type="file"
+                        accept="image/*"
+                        name="input_imgs3[]"
+                        multiple
+                        id="input_imgs2"
+                        accept="image/*"
+                        class="input_file"
+                    /></label>
+                  </div>
+                  <div class="img_scroll">
+                    <div class="imgs_wrap input_imgs_wrap2"></div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </section>
+          <!-- // progress_write_table -->
+
+          <button type="submit" accesskey="s" id="residence_submit" class="btn">
+            실시간현황 등록
+          </button>
+        </div>
+      </form>
+      <!-- footer -->
+
+      <footer>
+        <p>COPYRIGHT &copy; NAGONGGAN. ALL RIGHTS RESERVED.</p>
+      </footer>
+      <!-- // footer -->
+    </div>
+    <!-- // container -->
+  </body>
+</html>

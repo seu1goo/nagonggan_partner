@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./img/nagonggan-og.png" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:description" content="인테리어 플랫폼 서비스" />
+    <meta property="og:title" content="인테리어 플랫폼 서비스" />
+    <meta name="Description" content="인테리어 플랫폼 서비스" />
+    <meta name="naver-site-verification" content="" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon.png" />
+    <title>나만의공간 파트너공간</title>
+
+    <!-- jQuery -->
+    <script src="./js/library/jquery/jquery-3.6.0.min.js"></script>
+
+    <!-- Linear Icons -->
+    <link rel="stylesheet" href="./css/Linearicons-Free/WebFont/style.css" />
+
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="./css/fontAwesome/css/all.min.css" />
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="./js/library/swiper/swiper-bundle.min.css" />
+    <script src="./js/library/swiper/swiper-bundle.min.js"></script>
+
+    <!-- style -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- js -->
+    <script src="./js/partner.js"></script>
+  </head>
+
+  <body>
+    <div id="contents" class="login">
+      <section class="login_wrap">
+        <div class="sc_title">
+          <img src="./img/logo_w.png" alt="SC company" />
+          <h4>시공사 서비스 플랫폼</h4>
+        </div>
+        <div class="login_area">
+          <img src="./img/logo_pp.png" alt="나만의공간" />
+          <form name="partner_login_form" id="partner_login_form" method="post">
+            <input
+              type="text"
+              name="partner_id"
+              required
+              placeholder="아이디를 입력하세요"
+              id="partner_id"
+            />
+            <input
+              type="password"
+              name="partner_pw"
+              required
+              placeholder="비밀번호를 입력하세요"
+              id="partner_pw"
+            />
+            <a href="./home.html" id="btn_submit">로그인</a>
+            <div class="login_b">
+              <div class="auto_login">
+                <input
+                  type="checkbox"
+                  name="partner_auto_login"
+                  id="partner_auto_login"
+                />
+                <label for="partner_auto_login">자동로그인</label>
+              </div>
+              <ul class="find_user">
+                <li>
+                  <a href="javascript:void(0);" class="open_pop open_find_id"
+                    >아이디 찾기</a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="open_pop open_find_pw"
+                    >비밀번호 찾기</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="btn_area">
+              <a href="./join.html">시공사 가입</a>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- pop_find_id -->
+      <div class="pop_wrap pop_find_id">
+        <div class="pop_inner">
+          <div class="pop_header">
+            <h4>아이디 찾기</h4>
+            <button type="button" class="pop_close">
+              <span class="lnr lnr-cross"></span>
+            </button>
+          </div>
+
+          <div class="pop_contents">
+            <p>※ 가입 시 입력하신 정보를 입력해 주세요.</p>
+            <table>
+              <tr>
+                <th>회사 상호명</th>
+                <td>
+                  <input
+                    type="text"
+                    name="company_name"
+                    required
+                    placeholder="회사 상호명"
+                    id="company_name"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th>회사 이메일</th>
+                <td>
+                  <input
+                    type="text"
+                    name="company_email"
+                    required
+                    placeholder="회사 이메일"
+                    id="company_email"
+                  />
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="pop_footer">
+            <button
+              type="button"
+              accesskey="s"
+              id="find-complete-open"
+              class="pop_btn btn_find_id"
+            >
+              아이디찾기
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- // pop_find_id -->
+
+      <!-- pop_find_id_chk -->
+      <div class="pop_wrap pop_find_id_chk" id="find-complete">
+        <div class="pop_inner">
+          <div class="pop_header">
+            <h4>아이디 찾기</h4>
+          </div>
+
+          <div class="pop_contents" id="find_id_txt">
+            <h3>
+              회원님의 아이디는 <br />
+              <strong>abc1**</strong> 입니다.
+            </h3>
+            <span>개인정보 보호를 위해 아이디의 일부는 *로 표기됩니다.</span>
+          </div>
+
+          <div class="pop_footer">
+            <button type="button" class="pop_btn go_login">
+              로그인하러 가기
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- // pop_find_id_chk -->
+
+      <!-- pop_find_pw -->
+      <div class="pop_wrap pop_find_pw">
+        <div class="pop_inner">
+          <div class="pop_header">
+            <h4>비밀번호 찾기</h4>
+            <button type="button" class="pop_close">
+              <span class="lnr lnr-cross"></span>
+            </button>
+          </div>
+
+          <div class="pop_contents">
+            <p>※ 가입 시 입력하신 정보를 입력해 주세요.</p>
+            <table>
+              <tr>
+                <th>아이디</th>
+                <td>
+                  <input
+                    type="text"
+                    name="login_partner_id"
+                    required
+                    placeholder="아이디"
+                    id="login_partner_id"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th>회사 이메일</th>
+                <td>
+                  <input
+                    type="text"
+                    name="company_email2"
+                    required
+                    placeholder="회사 이메일"
+                    id="company_email2"
+                  />
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="pop_footer">
+            <button
+              type="submit"
+              accesskey="s"
+              id="find-complete-open2"
+              class="pop_btn btn_find_pw"
+            >
+              비밀번호 찾기
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- // pop_find_pw -->
+
+      <!-- pop_find_pw_set -->
+      <div class="pop_wrap pop_find_pw_set find-complete2">
+        <div class="pop_inner">
+          <div class="pop_header">
+            <h4>비밀번호 재설정</h4>
+            <button type="button" class="pop_close">
+              <span class="lnr lnr-cross"></span>
+            </button>
+          </div>
+
+          <div class="pop_contents">
+            <p>인증이 완료되었습니다. 새로운 비밀번호를 입력해 주세요.</p>
+            <input type="hidden" id="ch_" value="" />
+            <input type="hidden" id="ch_e" value="" />
+            <table>
+              <tr>
+                <th>새 비밀번호</th>
+                <td>
+                  <input
+                    type="password"
+                    name="login_partner_pw"
+                    required
+                    placeholder="새 비밀번호 입력 (5~12자리)"
+                    id="login_partner_pw"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th>새 비밀번호 확인</th>
+                <td>
+                  <input
+                    type="password"
+                    name="login_partner_pw_chk"
+                    required
+                    placeholder="새 비밀번호 재입력"
+                    id="login_partner_pw_chk"
+                  />
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="pop_footer">
+            <button type="button" class="pop_btn btn_find_pw_set">확인</button>
+          </div>
+        </div>
+      </div>
+      <!-- // pop_find_pw_set -->
+
+      <!-- pop_find_pw_chk -->
+      <div class="pop_wrap pop_find_pw_chk">
+        <div class="pop_inner">
+          <div class="pop_contents">
+            <img src="./img/ico_check_o.png" alt="완료" />
+            <h3>
+              <span>새로운 비밀번호</span>로 <br />
+              <strong>변경이 완료</strong>되었습니다.
+            </h3>
+            <span>변경된 비밀번호로 다시 로그인 하시기 바랍니다.</span>
+          </div>
+
+          <div class="pop_footer">
+            <button type="button" class="pop_btn go_login">
+              로그인하러 가기
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- // pop_find_pw_chk -->
+    </div>
+  </body>
+</html>

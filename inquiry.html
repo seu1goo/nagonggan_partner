@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./img/nagonggan-og.png" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:description" content="인테리어 플랫폼 서비스" />
+    <meta property="og:title" content="인테리어 플랫폼 서비스" />
+    <meta name="Description" content="인테리어 플랫폼 서비스" />
+    <meta name="naver-site-verification" content="" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon.png" />
+    <title>나만의공간 파트너공간</title>
+
+    <!-- jQuery -->
+    <script src="./js/library/jquery/jquery-3.6.0.min.js"></script>
+
+    <!-- Linear Icons -->
+    <link rel="stylesheet" href="./css/Linearicons-Free/WebFont/style.css" />
+
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="./css/fontAwesome/css/all.min.css" />
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="./js/library/swiper/swiper-bundle.min.css" />
+    <script src="./js/library/swiper/swiper-bundle.min.js"></script>
+
+    <!-- style -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- js -->
+    <script src="./js/partner.js"></script>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <div class="h_top">
+        <div class="inner">
+          <h1 class="logo">
+            <a href="./home.html">
+              <span>파트너공간</span>
+            </a>
+          </h1>
+          <nav>
+            <ul class="gnb">
+              <li class="active">
+                <a href="./inquiry.html">문의내역</a>
+              </li>
+              <li>
+                <a href="./contract.html">계약진행</a>
+              </li>
+              <li>
+                <a href="./portfolio.html"
+                  ><img src="./img/ico_image_off.png" alt="포트폴리오" />
+                  포트폴리오</a
+                >
+              </li>
+              <li>
+                <a href="./progress.html"
+                  ><img src="./img/ico_image_off.png" alt="실시간현황" />
+                  실시간현황</a
+                >
+              </li>
+              <li>
+                <a href="./pay.html"
+                  ><img src="./img/ico_card_off.png" alt="결제" /> 결제</a
+                >
+              </li>
+              <li>
+                <a href="javascript:void(0);" class="pop_open open_company"
+                  ><img src="./img/ico_building.png" alt="회사정보" />
+                  회사정보</a
+                >
+              </li>
+              <li>
+                <a href="https://seu1goo.github.io/nagonggan/" target="_blank"
+                  ><img src="./img/ico_monitor.png" alt="사이트 바로가기" />
+                  사이트 바로가기</a
+                >
+              </li>
+            </ul>
+            <ul class="tnb">
+              <li class="profile">
+                <figure>
+                  <img
+                    src="./img/ico_profile.png"
+                    alt="프로필 사진"
+                    onerror="this.src='./img/img_profile.png'"
+                  />
+                </figure>
+                <span>인테리어 회사</span>
+              </li>
+              <li class="logout">
+                <a href="./">
+                  <img src="./img/ico_logout.png" alt="로그아웃" />
+                  <span>로그아웃</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="h_bottom">
+        <div class="inner">
+          <div class="month">
+            <h5>월별누적</h5>
+            <ul>
+              <li>실시간현황 <span>1</span>건</li>
+              <li>포트폴리오 <span>12</span>건</li>
+              <li>이달견적건 <span>13</span>건</li>
+            </ul>
+          </div>
+          <div class="all">
+            <h5>전체누적</h5>
+            <ul>
+              <li>시공수주 <span>5</span>건</li>
+              <li>수주율 <span>43</span>%</li>
+              <li>
+                누적시공총액
+                <span>15,689,640</span>원
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- // header -->
+
+    <!-- pop_company -->
+    <div class="pop_wrap pop_company">
+      <form
+        id="form_partner_edit"
+        name="form_partner_edit"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="pop_inner">
+          <div class="pop_header">
+            <button type="button" class="pop_close">
+              <span class="lnr lnr-cross"></span>
+            </button>
+            <h4>회사정보</h4>
+          </div>
+          <div class="pop_contents">
+            <div class="write_wrap">
+              <label for="edit_partner_pw">비밀번호 변경</label>
+              <input
+                type="password"
+                name="edit_partner_pw"
+                placeholder="비밀번호 변경 (5~12자리)"
+                minlength="5"
+                maxlength="12"
+                id="edit_partner_pw"
+                class="pop_c_input"
+              />
+            </div>
+            <div class="write_wrap">
+              <label for="edit_partner_pw_ok">비밀번호 확인</label>
+              <input
+                type="password"
+                name="edit_partner_pw_ok"
+                placeholder="비밀번호 확인"
+                minlength="5"
+                maxlength="12"
+                id="edit_partner_pw_ok"
+                class="pop_c_input"
+              />
+            </div>
+            <div class="write_wrap">
+              <label for="ceo_name">대표자 성명</label>
+              <input
+                type="text"
+                name="ceo_name"
+                value=""
+                placeholder="대표자 성명"
+                id="ceo_name"
+                class="pop_c_input"
+              />
+            </div>
+            <div class="write_wrap">
+              <label for="ceo_phone">대표자 연락처</label>
+              <input
+                type="text"
+                name="ceo_phone"
+                value=""
+                placeholder="대표자 연락처"
+                id="ceo_phone"
+                class="pop_c_input"
+              />
+            </div>
+            <div class="write_wrap">
+              <label for="ceo_phone">사업등록번호</label>
+              <input
+                type="text"
+                name="company_license"
+                value=""
+                placeholder="사업등록번호"
+                id="company_license"
+                class="pop_c_input"
+              />
+            </div>
+            <div class="write_wrap">
+              <label for="company_name">회사 상호명</label>
+              <input
+                type="text"
+                name="company_name"
+                value=""
+                placeholder="회사 상호명"
+                id="company_name"
+                class="pop_c_input"
+              />
+            </div>
+            <div class="write_wrap">
+              <label for="company_phone">회사 연락처</label>
+              <input
+                type="text"
+                name="company_phone"
+                value=""
+                placeholder="회사 연락처"
+                id="company_phone"
+                class="pop_c_input"
+              />
+            </div>
+            <div class="write_wrap">
+              <label for="company_email">회사 이메일</label>
+              <input
+                type="text"
+                name="company_email"
+                value=""
+                placeholder="회사 이메일"
+                id="company_email"
+                class="pop_c_input"
+              />
+            </div>
+            <div class="write_wrap">
+              <label for="company_web">회사 홈페이지</label>
+              <input
+                type="text"
+                name="company_web"
+                value=""
+                placeholder="회사 홈페이지"
+                id="company_web"
+                class="pop_c_input"
+              />
+            </div>
+            <div class="write_wrap">
+              <label for="company_addr1">회사 주소</label>
+              <input
+                type="text"
+                name="company_addr1"
+                value=""
+                placeholder="회사 주소"
+                id="company_addr1"
+                class="pop_c_input"
+              />
+            </div>
+            <div class="write_wrap">
+              <label for="company_addr2"></label>
+              <input
+                type="text"
+                name="company_addr2"
+                value=""
+                placeholder="나머지 주소"
+                id="company_addr2"
+                class="pop_c_input"
+              />
+            </div>
+            <div class="write_wrap">
+              <label for="business_area">시공(설계)지역</label>
+              <select
+                name="business_area"
+                id="business_area"
+                class="pop_c_input"
+              >
+                <option value="">시공지역</option>
+                <option value="서울/경기/인천">서울/경기/인천</option>
+                <option value="대전/세종/충청">대전/세종/충청</option>
+                <option value="부산/대구/경상">부산/대구/경상</option>
+                <option value="광주/목포/전라">광주/목포/전라</option>
+                <option value="강원/제주">강원/제주</option>
+              </select>
+            </div>
+            <div class="write_wrap">
+              <label for="business_career" class="adm_bo_w_tit">경력</label>
+              <select
+                name="business_career"
+                id="business_career"
+                class="pop_c_input"
+              >
+                <option value="">경력</option>
+                <option value="1년~10년">1년~10년</option>
+                <option value="11년~20년">11년~20년</option>
+                <option value="21년~30년">21년~30년</option>
+                <option value="31년 이상">31년 이상</option>
+              </select>
+            </div>
+            <div class="write_wrap">
+              <label for="company_addr2">전문분야</label>
+              <input
+                type="text"
+                name="main_field"
+                value=""
+                placeholder="전문분야"
+                id="main_field"
+                class="pop_c_input"
+              />
+            </div>
+            <div class="write_wrap">
+              <label for="company_license_img">사업자 사본</label>
+              <input
+                type="file"
+                name="company_license_img"
+                title="용량 1MB 이하만 업로드 가능"
+                id="company_license_img"
+                class="pop_c_file"
+              />
+              <img
+                src="./img/img_base.png"
+                alt="사업자 사본"
+                onerror="this.src='../img/img_base.png'"
+              />
+            </div>
+            <div class="write_wrap">
+              <label for="company_logo">상호, 로고</label>
+              <input
+                type="file"
+                name="company_logo"
+                title="용량 1MB 이하만 업로드 가능"
+                id="company_logo"
+                class="pop_c_file"
+              />
+              <img
+                src="./img/img_base.png"
+                alt="상호, 로고"
+                onerror="this.src='./img/img_base.png'"
+              />
+            </div>
+            <div class="write_wrap">
+              <h5>시공범위 (중복체크 가능)</h5>
+              <div class="partner_wrap">
+                <div class="all">
+                  <h6>종합인테리어</h6>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="business_scope"
+                      value="11000"
+                      id="business_scope"
+                    /><span>주거공간 종합인테리어</span></label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="business_scope"
+                      value="12000"
+                    /><span>상업공간 종합인테리어</span></label
+                  >
+                </div>
+                <div class="one">
+                  <h6>한 분야 인테리어</h6>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="business_scope"
+                      value="21100"
+                      id="business_scope"
+                    /><span>도배</span></label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="business_scope"
+                      value="21200"
+                      id="business_scope"
+                    /><span>장판</span></label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="business_scope"
+                      value="21300"
+                      id="business_scope"
+                    /><span>마루</span></label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="business_scope"
+                      value="21400"
+                      id="business_scope"
+                    /><span>주방</span></label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="business_scope"
+                      value="21500"
+                      id="business_scope"
+                    /><span>욕실</span></label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="business_scope"
+                      value="21600"
+                      id="business_scope"
+                    /><span>방문</span></label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="business_scope"
+                      value="21700"
+                      id="business_scope"
+                    /><span>중문</span></label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="business_scope"
+                      value="21800"
+                      id="business_scope"
+                    /><span>샷시</span></label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="business_scope"
+                      value="21900"
+                      id="business_scope"
+                    /><span>필름</span></label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="business_scope"
+                      value="22000"
+                      id="business_scope"
+                    /><span>몰딩</span></label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="business_scope"
+                      value="22100"
+                      id="business_scope"
+                    /><span>기타</span></label
+                  >
+                </div>
+              </div>
+            </div>
+            <textarea
+              name="company_intro"
+              placeholder="회사소개"
+              id="company_intro"
+            ></textarea>
+          </div>
+          <div class="pop_footer">
+            <button
+              type="button"
+              accesskey="s"
+              onclick="check_partner_edit();"
+              id="company_submit"
+              class="pop_btn"
+            >
+              수정하기
+            </button>
+            <div class="partner_withdrawal">
+              <button type="button">탈퇴하기</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- // pop_company -->
+
+    <!-- pop_withdrawal -->
+    <div class="pop_wrap pop_withdrawal">
+      <div class="pop_inner">
+        <div class="pop_header">
+          <button type="button" class="pop_close">
+            <span class="lnr lnr-cross"></span>
+          </button>
+          <h4>회원탈퇴</h4>
+        </div>
+
+        <div class="pop_contents">
+          <section class="withdrawal_info">
+            <div class="info">
+              <h4>유의사항</h4>
+              <h5>회원탈퇴 규정 안내입니다. 꼭 확인해 주세요.</h5>
+              <ul>
+                <li>
+                  소비자보호에 관한 법률 제6조에 의거, 계약 또는 청약철회 등에
+                  관한 기록은 5년, 대금결제 및 재화등의 공급에 관한 기록은 5년,
+                  소비자의 불만 또는 분쟁처리에 관한 기록은 3년 동안 보관됩니다.
+                  개인정보는 법률에 의한 보유 목적 외에 다른 목적으로는 이용되지
+                  않습니다.
+                </li>
+              </ul>
+            </div>
+            <div class="agree">
+              <input
+                type="checkbox"
+                name="withdrawal_agree"
+                value="Y"
+                id="withdrawal_agree"
+              />
+              <label for="withdrawal_agree"
+                >유의사항을 확인하였으며, 동의합니다.</label
+              >
+            </div>
+          </section>
+
+          <section class="withdrawal_service">
+            <h4>서비스 개선 사항</h4>
+            <h5>서비스 개선 사항이 있다면 의견을 남겨 주세요.</h5>
+            <textarea
+              name="withdrawal_reason"
+              id="withdrawal_reason"
+            ></textarea>
+            <p class="count">0 / 300</p>
+          </section>
+        </div>
+        <div class="pop_footer">
+          <button type="button" class="btn_quit">탈퇴하기</button>
+        </div>
+      </div>
+    </div>
+    <!-- // pop_withdrawal -->
+
+    <!-- pop_quit_approval -->
+    <div class="pop_wrap pop_quit_approval">
+      <div class="pop_inner">
+        <h3>정말 탈퇴 하시겠습니까?</h3>
+        <div class="btn_area">
+          <button type="button" class="btn_quit_approval">확인</button>
+          <button type="button" class="btn_quit_cancel">취소</button>
+        </div>
+      </div>
+    </div>
+    <!-- // pop_quit_approval -->
+
+    <!-- pop_quit_chk -->
+    <div class="pop_wrap pop_quit_chk">
+      <div class="pop_inner">
+        <figure><img src="./img/ico_check_o.png" alt="확인" /></figure>
+        <h3>정상적으로 접수 되었습니다.</h3>
+        <p>
+          그동안 나만의공간 파트너스를 <br />
+          이용해 주셔서 감사합니다.
+        </p>
+        <div class="btn_area">
+          <a href="./" class="btn_quit_chk">확인</a>
+        </div>
+      </div>
+    </div>
+    <!-- // pop_quit_chk -->
+
+    <!-- contents -->
+    <div id="contents" class="inquiry_list">
+      <!-- inquiry -->
+      <section class="inquiry">
+        <form name="form_search">
+          <div class="inner">
+            <div class="sec_title">
+              <h4>문의내역</h4>
+              <p>
+                전체
+                <span>3</span>건
+              </p>
+            </div>
+            <div class="input_wrap">
+              <div class="date_wrap">
+                <input
+                  type="date"
+                  name="fromDate"
+                  value=""
+                  autocomplete="off"
+                  id="fromDate"
+                />
+                <span>~</span>
+                <input
+                  type="date"
+                  name="toDate"
+                  value=""
+                  autocomplete="off"
+                  id="toDate"
+                />
+              </div>
+              <fieldset id="hd_sch" class="search_wrap">
+                <input
+                  type="text"
+                  name="sch_stx"
+                  value=""
+                  maxlength="20"
+                  placeholder="고객명을 입력해주세요"
+                  id="sch_stx"
+                />
+                <button type="submit" id="sch_submit">
+                  <span class="lnr lnr-magnifier"></span>
+                </button>
+              </fieldset>
+            </div>
+            <table>
+              <colgroup>
+                <col width="4%" />
+                <col width="7%" />
+                <col width="6%" />
+                <col width="8%" />
+                <col width="5%" />
+                <col width="" />
+                <col width="4%" />
+                <col width="6%" />
+                <col width="6%" />
+                <col width="7%" />
+                <col width="6%" />
+                <col width="10%" />
+                <col width="7%" />
+                <col width="10%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="trl">No.</th>
+                  <th>문의날짜</th>
+                  <th>고객명</th>
+                  <th>연락처</th>
+                  <th>공간분류</th>
+                  <th>시공주소</th>
+                  <th>평수</th>
+                  <th>공사유형</th>
+                  <th>공사환경</th>
+                  <th>공사예정일</th>
+                  <th>예산</th>
+                  <th>요구사항</th>
+                  <th>시공범위</th>
+                  <th class="trr">소비자 미팅시간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="brl">1</td>
+                  <td>2023-12-03</td>
+                  <td>홍길동</td>
+                  <td>010-1234-5678</td>
+                  <td>아파트</td>
+                  <td>
+                    경기 안산시 단원구 원선1로 61, 경남아너스빌 101동 1402호
+                  </td>
+                  <td>32</td>
+                  <td>도배</td>
+                  <td>살고있음</td>
+                  <td>2주</td>
+                  <td>3,500만원</td>
+                  <td>모던 희망</td>
+                  <td>주거공간</td>
+                  <td class="brr">12월 31일, 12시 30분</td>
+                </tr>
+                <tr>
+                  <td class="brl">2</td>
+                  <td>2023-12-03</td>
+                  <td>홍길동</td>
+                  <td>010-1234-5678</td>
+                  <td>아파트</td>
+                  <td>
+                    경기 안산시 단원구 원선1로 61, 경남아너스빌 101동 1402호
+                  </td>
+                  <td>32</td>
+                  <td>도배</td>
+                  <td>살고있음</td>
+                  <td>2주</td>
+                  <td>3,500만원</td>
+                  <td>모던 희망</td>
+                  <td>주거공간</td>
+                  <td class="brr">12월 31일, 12시 30분</td>
+                </tr>
+                <tr>
+                  <td class="brl">3</td>
+                  <td>2023-12-03</td>
+                  <td>홍길동</td>
+                  <td>010-1234-5678</td>
+                  <td>아파트</td>
+                  <td>
+                    경기 안산시 단원구 원선1로 61, 경남아너스빌 101동 1402호
+                  </td>
+                  <td>32</td>
+                  <td>도배</td>
+                  <td>살고있음</td>
+                  <td>2주</td>
+                  <td>3,500만원</td>
+                  <td>모던 희망</td>
+                  <td>주거공간</td>
+                  <td class="brr">12월 31일, 12시 30분</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="pg_wrap">
+              <div class="pg">
+                <span class="pg_start">pg_start</span>
+                <span class="pg_prev">pg_prev</span>
+                <span class="pg_page pg_current">1</span>
+                <span class="pg_page">2</span>
+                <span class="pg_page">3</span>
+                <span class="pg_page">4</span>
+                <span class="pg_page">5</span>
+                <span class="pg_page">6</span>
+                <span class="pg_page">7</span>
+                <span class="pg_page">8</span>
+                <span class="pg_page">9</span>
+                <span class="pg_page">10</span>
+                <span class="pg_next">pg_next</span>
+                <span class="pg_end">pg_end</span>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+      <!-- // inquiry -->
+    </div>
+    <!-- // contents -->
+  </body>
+</html>
