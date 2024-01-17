@@ -1051,15 +1051,6 @@ table tr {
   white-space: nowrap;
 }
 
-.home_cumulative ul li h3 .won {
-  display: block;
-  width: 100%;
-  /* font-size: 2.4rem; */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .home_cumulative ul li p {
   font-size: 1.3rem;
   font-weight: 500;
